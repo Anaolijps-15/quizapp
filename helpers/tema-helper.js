@@ -1,5 +1,6 @@
 let tema = "claro"
 
+
 export function trocarTema(body, botaoTema) {
     if (localStorage.getItem("tema")) {
         tema = localStorage.getItem("tema")
@@ -21,7 +22,7 @@ export function verificarTema(body, botaoTema) {
         tema = localStorage.getItem("tema")
     }
 
-    if (tema === escuro) {
+    if (tema === "escuro") {
         body.classList.add("escuro")
         botaoTema.style.justifyContent = "flex-end"
     }
