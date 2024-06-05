@@ -21,6 +21,7 @@ function alterarAssunto() {
     const divIcone = document.querySelector(".assunto_icone")
     const iconeImg = document.querySelector(".assunto_icone img")
     const assuntoTitulo = document.querySelector(".assunto h1")
+
     divIcone.classList.add(assunto.toLowerCase())
     iconeImg.setAttribute("src", `../../assets/images/icon-${assunto.toLowerCase()}.svg`)
     iconeImg.setAttribute('alt', `icone de ${assunto}`)
@@ -127,12 +128,13 @@ function validarResposta() {
         document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id", "errada")
         document.querySelector(`label[for='${respostaCorretaId}']`).setAttribute("id", "correta")
     }
+
     pergunta = pergunta + 1
 }
 
 function finalizar() {
     localStorage.setItem("pontos", pontos)
-    window.location.href = "../resultado.html"
+    window.location.href = "../resultado/resultado.html"
 }
 
 function proximaPergunta() {
